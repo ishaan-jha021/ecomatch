@@ -1,0 +1,12 @@
+{
+    "name": "venuescraper-scripts",
+    "version": "1.0.0",
+    "description": "Scraping scripts for VenueScraper",
+    "main": "index.js",
+    "scripts": {
+        "scrape": "node index.js"
+    },
+    "dependencies": {
+        "puppeteer": "^22.0.0"
+    }
+}
