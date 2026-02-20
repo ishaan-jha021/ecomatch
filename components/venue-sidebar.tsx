@@ -7,7 +7,7 @@ interface VenueSidebarProps {
     venueName: string;
     venueType: string;
     pricing: { amount: number; period: string; currency: string };
-    equityTerms?: { takesEquity: boolean; percentage: number; description: string } | null;
+    equityTerms?: { takesEquity: boolean; percentage?: number; description?: string } | null;
     website?: string;
     trustScore: number;
     reviewsCount: number;
