@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
-import { Search, Sparkles, ArrowRight } from "lucide-react";
+import { Search, ArrowRight } from "lucide-react";
 
 const EXAMPLE_QUERIES = [
     "Incubators in Bangalore",
@@ -68,22 +68,22 @@ export function SmartSearchBar() {
         <div className="max-w-2xl mx-auto">
             {/* Search Bar */}
             <form onSubmit={handleSubmit} className="relative mb-4">
-                <div className={`flex items-center border-2 rounded-2xl shadow-lg hover:shadow-xl transition-all bg-white overflow-hidden pl-5 pr-2 py-2 ${isSearching ? "border-violet-300 shadow-violet-100" : "border-gray-200 focus-within:border-rose-400"
+                <div className={`flex items-center border-2 rounded-2xl shadow-lg hover:shadow-xl transition-all bg-white overflow-hidden pl-5 pr-2 py-2 ${isSearching ? "border-rose-300 shadow-rose-100" : "border-gray-200 focus-within:border-rose-400"
                     }`}>
-                    <Sparkles className={`h-4 w-4 mr-3 shrink-0 transition-colors ${isSearching ? "text-violet-500 animate-pulse" : "text-gray-300"}`} />
+                    <Search className={`h-4 w-4 mr-3 shrink-0 transition-colors ${isSearching ? "text-rose-500" : "text-gray-300"}`} />
                     <input
                         ref={inputRef}
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                         className="flex-1 text-base placeholder:text-gray-400 focus:outline-none bg-transparent"
-                        placeholder={displayedPlaceholder || "Search with natural language..."}
+                        placeholder={displayedPlaceholder || "Search spaces..."}
                         type="text"
                         autoComplete="off"
                     />
                     <button
                         type="submit"
                         disabled={isSearching}
-                        className="h-10 w-10 rounded-xl bg-rose-500 hover:bg-rose-600 disabled:bg-violet-400 flex items-center justify-center transition-colors shrink-0 cursor-pointer"
+                        className="h-10 w-10 rounded-xl bg-rose-500 hover:bg-rose-600 disabled:bg-gray-400 flex items-center justify-center transition-colors shrink-0 cursor-pointer"
                     >
                         {isSearching ? (
                             <div className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin" />

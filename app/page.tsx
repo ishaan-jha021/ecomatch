@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { SmartSearchBar } from "@/components/smart-search-bar";
-import { MapPin, Shield, Zap, Sparkles } from "lucide-react";
+import { MapPin, Shield, Zap } from "lucide-react";
 
 export default function Home() {
   return (
@@ -19,13 +19,11 @@ export default function Home() {
               Verified co-working spaces and incubators across India. Real photos, real reviews, no noise.
             </p>
 
-            {/* AI-Powered Search Bar */}
             <SmartSearchBar />
 
-            <div className="flex items-center justify-center gap-1.5 text-xs text-gray-400 mt-3">
-              <Sparkles className="h-3 w-3" />
-              <span>AI-powered search — try natural language like &ldquo;coworking in Mumbai with 20 seats&rdquo;</span>
-            </div>
+            <p className="text-xs text-gray-400 mt-3">
+              Try &ldquo;coworking in Mumbai with 20 seats&rdquo; or &ldquo;zero equity incubators in Delhi&rdquo;
+            </p>
           </div>
         </section>
 

@@ -4,7 +4,7 @@ import { ResultCard } from "@/components/result-card";
 import { SortSelect } from "@/components/sort-select";
 import { searchVenues } from "@/lib/db";
 import { parseQueryWithLLM, ParsedQuery } from "@/lib/smart-search";
-import { Sparkles } from "lucide-react";
+import { SlidersHorizontal } from "lucide-react";
 
 export default async function SearchPage({
     searchParams,
@@ -79,14 +79,14 @@ export default async function SearchPage({
 
                         {/* Smart search insight bar */}
                         {isSmartSearch && parsedTags.length > 0 && (
-                            <div className="mb-5 bg-gradient-to-r from-violet-50 to-rose-50 border border-violet-100 rounded-xl px-4 py-3">
+                            <div className="mb-5 bg-gradient-to-r from-gray-50 to-rose-50 border border-gray-200 rounded-xl px-4 py-3">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <Sparkles className="h-4 w-4 text-violet-500" />
-                                    <span className="text-xs font-semibold text-violet-700">AI understood your search as:</span>
+                                    <SlidersHorizontal className="h-4 w-4 text-gray-500" />
+                                    <span className="text-xs font-semibold text-gray-600">Showing results for:</span>
                                 </div>
                                 <div className="flex flex-wrap gap-2">
                                     {parsedTags.map((tag) => (
-                                        <span key={tag.label} className="inline-flex items-center gap-1 text-xs bg-white border border-violet-200 rounded-full px-3 py-1">
+                                        <span key={tag.label} className="inline-flex items-center gap-1 text-xs bg-white border border-gray-200 rounded-full px-3 py-1">
                                             <span className="text-gray-400 font-medium">{tag.label}:</span>
                                             <span className="text-gray-900 font-semibold">{tag.value}</span>
                                         </span>
